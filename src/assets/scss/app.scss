@@ -73,6 +73,7 @@ $fa-font-path: "node_modules/@fortawesome/fontawesome-free/WebFonts" !default;
 @import "global/wp-admin";
 @import "global/wp-overrides";
 @import "global/gutenberg";
+@import "global/typography";
 
 // Modules
 @import "modules/navigation";
@@ -86,7 +87,5 @@ $fa-font-path: "node_modules/@fortawesome/fontawesome-free/WebFonts" !default;
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
-
-// Templates
-@import "templates/front";
-@import "templates/kitchen-sink";
+@import "components/book";
+@import "components/section";

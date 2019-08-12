@@ -2,8 +2,8 @@
 
 //$css-vars-use-native: true;
 
-$primary-color: hsl(203.9, 78%, 41%);
-$secondary-color: #767676;
+$primary-color: #142440;
+$secondary-color: #D4AF37;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #cc4b37;
@@ -24,8 +24,7 @@ $bg-dark: #121212;
     --bg-primary: $white,
     --bg-secondary: $black,
     --bg-dark: $bg-dark,
-    --text-primary: $black,
+    --text: $black,
     --text-secondary: $white,
     --nav-dark: $dark-nav-color,
     --nav-text-light: $white));
-

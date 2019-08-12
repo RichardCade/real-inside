@@ -4,101 +4,90 @@ Template Name: Front
 */
 get_header(); ?>
 
-<header class="front-hero" role="banner">
-	<div class="marketing">
-		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
-		</div>
-
-		<div class="watch">
-			<span id="stargazers"><a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a></span>
-			<span id="twitter"><a href="https://twitter.com/olefredrik">@olefredrik</a></span>
-		</div>
-	</div>
-
-</header>
-
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
-	<div class="fp-intro">
-
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
-			<footer>
-				<?php
-					wp_link_pages(
-						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-							'after'  => '</p></nav>',
-						)
-					);
-				?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
-		</div>
-
-	</div>
-
-</section>
-<?php endwhile; ?>
-<?php do_action( 'foundationpress_after_content' ); ?>
-
-<div class="section-divider">
-	<hr />
-</div>
+<section class="gradient-background header show-for-medium">
 
 <div class="container">
-  <div class="grid">
-       <div class="column large-5"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sit incidunt officiis! Illo labore dolorum, fugiat, eveniet cumque officia ex incidunt dignissimos, beatae unde saepe modi tempora nulla. Deserunt, nostrum!</div>
-      <div class="column large-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sit incidunt officiis! Illo labore dolorum, fugiat, eveniet cumque officia ex incidunt dignissimos, beatae unde saepe modi tempora nulla. Deserunt, nostrum!</div>
+    <div class="grid align-justify align-middle text-left">
+    
+      <div class="column medium-12 large-6">
+        <h1><strong><?php the_field( 'section_one_title_text' ); ?></strong></h1>
+        <hr>
+        <h4><?php the_field( 'bookcase_text' ); ?></h4>
+        <br>
+        <a href="<?php echo esc_url(site_url('/portals')) ?>" role="button" class="button sites-button hollow light">Get started <i class="fas fa-chevron-right" aria-hidden="true"></i></a> <span class="screen-reader-text"><?php echo esc_html_x('Online Portals', 'button', 'FoundationPress') ?></span>
+      </div>
+    
+      <div class="column medium-12 large-4 header-bookcase">
+        <?php get_template_part('template-parts/bookcase'); ?>
+      </div>
+    
+    </div>
   </div>
-</div>
-
-<section class="benefits">
-	<header>
-		<h2>Build Foundation based sites, powered by WordPress</h2>
-		<h4>Foundation is the professional choice for designers, developers and teams. <br /> WordPress is by far, <a href="http://trends.builtwith.com/cms">the world's most popular CMS</a> (currently powering 38% of the web).</h4>
-	</header>
-
-	<div class="semantic">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/semantic.svg" alt="semantic">
-		<h3>Semantic</h3>
-		<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-	</div>
-
-	<div class="responsive">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/responsive.svg" alt="responsive">
-		<h3>Responsive</h3>
-		<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
-
-	</div>
-
-	<div class="customizable">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/customizable.svg" alt="customizable">
-		<h3>Customizable</h3>
-		<p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
-
-	</div>
-
-	<div class="professional">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/professional.svg" alt="professional">
-		<h3>Professional</h3>
-		<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
-	</div>
-
-	<div class="why-foundation">
-		<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
-	</div>
 
 </section>
+
+<section class="container show-for-small-only">
+
+  <div class="grid align-justify align-middle text-left">
+
+    <div class="column">
+      <h1><strong><?php the_field( 'section_one_title_text' ); ?></strong></h1>
+      <hr>
+      <h4><?php the_field( 'bookcase_text' ); ?></h4>
+      <br>
+      <a href="<?php echo esc_url(site_url('/portals')) ?>" role="button" class="button sites-button">Get started <i class="fas fa-chevron-right" aria-hidden="true"></i></a> <span class="screen-reader-text"><?php echo esc_html_x('Online Portals', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/hr-portal')) ?>" role="button" class="button sites-button expanded">HR Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('HR Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/it-portal')) ?>" role="button" class="button sites-button expanded">IT Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('IT Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/marketing-portal')) ?>" role="button" class="button sites-button expanded">Marketing Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Marketing Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/planning-portal')) ?>" role="button" class="button sites-button expanded">Planning Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Planning Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/property-portal')) ?>" role="button" class="button sites-button expanded">Property Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Property Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/public-relations-portal')) ?>" role="button" class="button sites-button expanded">Public Relations Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Public Relations Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/strategy-portal')) ?>" role="button" class="button sites-button expanded">Strategy Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Strategy Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/tradesman-portal')) ?>" role="button" class="button sites-button expanded">Tradesman Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Tradesman Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/technology-portal')) ?>" role="button" class="button sites-button expanded">Technology Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Technology Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+    <div class="column book-button">
+      <a href="<?php echo esc_url(site_url('/utilities-portal')) ?>" role="button" class="button sites-button expanded">Utilities Portal</a> <span class="screen-reader-text"><?php echo esc_html_x('Utilities Portal', 'button', 'FoundationPress') ?></span>
+    </div>
+
+  </div>
+
+</section>
+
+<div class="container">
+  <main class="main-content">
+    <?php while ( have_posts() ) : the_post(); ?>
+    <?php get_template_part( 'template-parts/content', 'page' ); ?>
+    <?php comments_template(); ?>
+    <?php endwhile; ?>
+  </main>
+</div>
+
 
 <?php get_footer();

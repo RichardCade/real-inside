@@ -1,5 +1,12 @@
+//Hide Page Title
+body.home {
+  h1.entry-title {
+    display: none;
+  }
+}
+
 .container {
-  @include xy-grid-container;
+  @include xy-grid-container(rem-calc(1600), 0);
 }
 
 .grid {
