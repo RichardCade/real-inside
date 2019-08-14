@@ -1,0 +1,17 @@
+section {
+  margin: 50px 0;
+
+  &.gradient-background {
+    background: linear-gradient(110deg, var(--primary) 52%, var(--secondary) 48%);
+    color: var(--white);
+    padding: 30px;
+  }
+  
+  &.secondary-background {
+    background: $medium-gray;
+  }
+
+  &.header {
+    margin: 0 0 50px 0;
+  }
+}
