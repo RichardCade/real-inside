@@ -14,7 +14,7 @@ get_header(); ?>
         <hr>
         <h3><?php the_field( 'bookcase_text' ); ?></h3>
         <br>
-        <a href="<?php echo esc_url(site_url('/portals')) ?>" role="button" class="button sites-button hollow light">Get started <i class="fas fa-chevron-right" aria-hidden="true"></i></a> <span class="screen-reader-text"><?php echo esc_html_x('Online Portals', 'button', 'FoundationPress') ?></span>
+        <a href="<?php echo esc_url(site_url('/portals')) ?>" role="button" class="button sites-button hollow light">Get started <i class="fas fa-chevron-right" aria-hidden="true"></i></a> <span class="screen-reader-text"><?php echo esc_html_x('Online Portals', 'button', 'FoundationPress') ?></span>        
       </div>
 
       <div class="column medium-12 large-4 header-bookcase">

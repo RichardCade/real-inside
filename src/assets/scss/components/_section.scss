@@ -4,7 +4,7 @@ section {
   &.gradient-background {
     background: linear-gradient(110deg, var(--primary) 52%, $medium-gray 48%);
     color: var(--white);
-    padding: 30px;
+    padding: 50px; 
   }
   
   &.secondary-background {
@@ -13,5 +13,6 @@ section {
 
   &.header {
     margin: 0 0 50px 0;
+    padding-bottom: 120px;
   }
 }

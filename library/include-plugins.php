@@ -72,6 +72,12 @@ function arkadia_theme_register_required_plugins() {
 			'required'			=> false,
 			'force_activation'	=> false,
 		),
+                                   array(
+			'name'         => 'Stackable – Gutenberg Blocks', // The plugin name.
+			'slug'         => 'stackable-ultimate-gutenberg-blocks', // The plugin slug (typically the folder name).
+			'required'			=> false,
+			'force_activation'	=> false,
+		),
                     array(
 			'name'         => 'Smush Image Compression and Optimization', // The plugin name.
 			'slug'         => 'wp-smushit', // The plugin slug (typically the folder name).

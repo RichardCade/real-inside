@@ -26,10 +26,10 @@
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
+    "animate.css": "^3.7.2",
     "css-vars": "^2.2.0",
     "foundation-sites": "6.5.3",
     "jquery": "^3.4.1",
-    "motion-ui": "^2.0.3",
     "os-locale": "^4.0.0",
     "what-input": "^5.2.3"
   },
@@ -60,6 +60,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-zip": "^4.0.0",
     "js-yaml": "^3.13.0",
+    "motion-ui": "^2.0.3",
     "panini": "^1.6.3",
     "rimraf": "^2.4.3",
     "style-sherpa": "^1.0.0",
