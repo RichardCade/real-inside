@@ -23,4 +23,7 @@ get_header(); ?>
     </main>
   </div>
 </div>
+
+<?php get_template_part('template-parts/get-in-touch'); ?>
+
 <?php get_footer();

@@ -48,11 +48,12 @@
     border-color: var(--white) transparent transparent;
   }
 
-  .menu > li.current_page_item > a {
+  .menu > li.current_page_item > a, .dropdown.menu > li.is-active > a {
     color: var(--white);
   }
 
 }
+
 
 .top-bar-title a:hover {
   border: none;

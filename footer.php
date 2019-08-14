@@ -9,16 +9,19 @@
  */
 ?>
 
-<footer class="footer-container">
-	<div class="footer-grid">
-		<?php dynamic_sidebar( 'footer-widgets' ); ?>
-	</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <?php dynamic_sidebar( 'footer-widgets' ); ?>
+    </div>
+  </div>
 </footer>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-	</div><!-- Close off-canvas content -->
+</div><!-- Close off-canvas content -->
 <?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>
+
 </html>
