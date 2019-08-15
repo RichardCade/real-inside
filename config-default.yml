@@ -37,7 +37,7 @@ PATHS:
     - "!**/composer.json"
     - "!**/composer.lock"
     - "!**/config.yml"
-    - "!**/config.default.yml"
+    - "!**/config-default.yml"
     - "!**/gulpfile.babel.js"
     - "!**/package.json"
     - "!**/package-lock.json"

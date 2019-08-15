@@ -96,6 +96,11 @@ function sass() {
     .pipe(browser.reload({ stream: true }));
 }
 
+function webfonts() {
+  return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+        .pipe(gulp.dest(PATHS.dist +'/assets/webfonts/'));
+}
+
 // Combine JavaScript into one file
 // In production, the file is minified
 const webpack = {
@@ -248,7 +253,7 @@ function watch() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(sass, 'webpack:build', images, copy)));
+  gulp.series(clean, gulp.parallel(sass, 'webpack:build', images, copy, webfonts)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',

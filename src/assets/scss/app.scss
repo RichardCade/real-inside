@@ -59,12 +59,12 @@
 */
 
 // Font Awesome
-$fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts" !default;
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+$fa-font-path: "../webfonts" !default;
+@import "global/font-awesome/fontawesome";
+@import "global/font-awesome/brands";
+@import "global/font-awesome/regular";
+@import "global/font-awesome/solid";
+@import "global/font-awesome/v4-shims";
 
 // Global
 @import "global/accessibility";
